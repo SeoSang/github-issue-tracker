@@ -1,0 +1,19 @@
+# modules
+
+node_modules
+yarn.lock
+
+
+# build result
+
+public/dist/*
+
+
+# log
+
+yarn-error.log
+
+# etc
+
+**/.DS_Store
+.idea/*

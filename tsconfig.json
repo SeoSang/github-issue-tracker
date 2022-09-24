@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "__sapper__/*"
+  ],
+  "compilerOptions": {
+    "isolatedModules": false,
+    "strict": true,
+    "target": "es6",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  }
+}

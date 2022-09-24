@@ -1,0 +1,77 @@
+{
+  "name": "github issue tracker",
+  "short_name": "oit",
+  "version": "1.1.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "public/dist/background.js"
+  },
+  "action": {
+    "default_title": "github-issue-tracker",
+    "default_icon": "public/icons/icon.png",
+    "default_popup": "public/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "public/dist/main.js"
+      ],
+      "css": [
+        "public/dist/bundle.css"
+      ]
+    }
+  ],
+  "commands": {
+    "recent-issues": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "show recent issues"
+    },
+    "recent-prs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "show recent pull requests"
+    },
+    "go-recent-issue": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "go to recent issue"
+    },
+    "go-recent-pr": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "go to recent issue"
+    }
+  },
+  "options_ui": {
+    "page": "public/options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "public/dist/options.js",
+        "public/dist/main.js"
+      ],
+      "matches": [],
+      "extension_ids": []
+    }
+  ],
+  "manifest_version": 3
+}
