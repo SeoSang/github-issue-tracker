@@ -3,7 +3,7 @@
 # Github-Issue-Tracker
 
 Github 이슈를 편하게 이용할 수 있게 도와주는 크롬 플러그인입니다.
-
+Cancel changes
 크롬 익스텐션 특성상 어느 페이지에서든 접근 가능하기 때문에 사용성이 좋고 빠릅니다.
 
 <!-- USAGE EXAMPLES -->
@@ -127,7 +127,7 @@ pin 기능을 제공합니다.
 
 
 1. 사전 준비사항을 완료합니다.
-2. [release]() 된 소스코드를 다운로드합니다. 혹은 추후에 기여할 생각이
+2. [release](https://github.com/SeoSang/github-issue-tracker/releases) 된 소스코드를 다운로드합니다. 혹은 추후에 기여할 생각이
    있으시다면, [Github-Issue-Tracker 레포](https://github.com/SeoSang/github-issue-tracker) 를 클론하셔도 됩니다.
 4. 패키지에 들어가서, 필요한 모듈들을 설치 및 빌드합니다.
    ```sh
