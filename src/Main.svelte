@@ -18,10 +18,25 @@
         if (isTarget) {
             loadHistory({isPrs: isPrListPage})
         }
+        console.log('init 실행됨')
     }
 
-    init()
-
+    const mainContainer = document.getElementsByTagName('turbo-frame').item(0)
+    
+    const observer = new MutationObserver((mutations) => {
+        let updateCheck = false
+        mutations.forEach((mutation) => {
+            console.log({attributeName:mutation.attributeName})
+            if (!updateCheck && mutation.type === 'attributes' && mutation.attributeName === 'complete') {
+                console.log('업데이트됨')
+                updateCheck = true
+                init()
+            }
+        });
+    });
+    
+    observer.observe(mainContainer, { attributes: true })
+   
     const onClickOutside = () => {
         $isRecentHistoryOpen = false
     }
@@ -60,7 +75,7 @@
 </script>
 
 
-<svelte:window on:keydown={onWindowKeydown}/>
+<svelte:window on:keydown={onWindowKeydown} on:focus={init()}/>
 {#if $isRecentHistoryOpen}
     <div on:click_outside={onClickOutside} use:clickOutside>
         <RecentModal/>
