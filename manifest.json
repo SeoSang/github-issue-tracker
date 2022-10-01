@@ -1,7 +1,7 @@
 {
   "name": "github issue tracker",
   "short_name": "oit",
-  "version": "1.1.0",
+  "version": "0.0.1",
   "permissions": [
     "tabs",
     "storage",

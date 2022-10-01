@@ -8,7 +8,7 @@ chrome?.commands?.onCommand.addListener((command) => {
   })
 })
 
-/* Send issue infor when GitHub is loaded */
+/* Send issue info when GitHub is loaded */
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   const url = tab.url
   if (!url || !chrome?.storage) return

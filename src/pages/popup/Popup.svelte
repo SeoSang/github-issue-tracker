@@ -17,7 +17,7 @@
             <a href="https://github.com/SeoSang/github-issue-tracker/issues" target="_blank">Report Bug 🐞</a>
         </li>
     </ul>
-    <footer>v1.1.0</footer>
+    <footer>v0.0.1</footer>
 </main>
 
 <style lang="scss">
